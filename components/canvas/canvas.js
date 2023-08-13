@@ -5,7 +5,7 @@ import "react-h5-audio-player/lib/styles.css";
 function Canvas() {
   const musicTracks = [
     {
-      name: "Cartoon, Asena - Howling",
+      name: "Cartoon, Asena - Howling (Andromedik Remix)",
       src: "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/781/howling-1597319420-UjfTH4Oz58.mp3",
     },
     {
@@ -69,41 +69,61 @@ function Canvas() {
   const [trackIndex, setTrackIndex] = useState(0);
 
   const handleClickPrevious = () => {
-    setTrackIndex((currentTrack) => (currentTrack === 0 ? musicTracks.length - 1 : currentTrack - 1));
+    setTrackIndex((currentTrack) =>
+      currentTrack === 0 ? musicTracks.length - 1 : currentTrack - 1
+    );
   };
 
   const handleClickNext = () => {
-    setTrackIndex((currentTrack) => (currentTrack < musicTracks.length - 1 ? currentTrack + 1 : 0));
+    setTrackIndex((currentTrack) =>
+      currentTrack < musicTracks.length - 1 ? currentTrack + 1 : 0
+    );
   };
   return (
-    <div style={{ zIndex: "100" }}>
+    <div className="z-100">
       <div className="position-relative fixed-top">
         <button
-          className="btn py-2 px-4 rounded-3 btn-primary position-absolute start-99 z-100"
-          style={{ marginTop: "80px", backgroundColor: "#f3af34" }}
+          className="btn border px-4 rounded-lg btn-warning text-white position-fixed z-100"
+          style={{
+            top: "75px",
+            backgroundColor: "#f3af34",
+            position: "absolute",
+            left: "25px",
+          }}
           type="button"
           data-bs-toggle="offcanvas"
           data-bs-target="#offcanvasBottom"
           aria-controls="offcanvasBottom"
         >
-          🎧
+          <span className="scale-150">&#9835;</span>
         </button>
       </div>
 
-      <div className="offcanvas offcanvas-bottom rounded-2" style={{ height: "210px", backgroundColor: "#f3af34" }} tabIndex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+      <div
+        className="offcanvas offcanvas-bottom rounded-2"
+        style={{ height: "210px", backgroundColor: "#f3af34" }}
+        tabIndex="-1"
+        id="offcanvasBottom"
+        aria-labelledby="offcanvasBottomLabel"
+      >
         <div className="offcanvas-header d-flex align-items-center text-white pb-0">
           <h5 className="offcanvas-title fw-bold" id="offcanvasBottomLabel">
             Music Player
           </h5>
-          <button type="button" className="btn-close m-0" data-bs-dismiss="offcanvas" aria-label="Close">
-            <p className="text-white pb-5">✖</p>
+          <button
+            type="button"
+            className="btn btn-close m-0 relative"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          >
+            <span className="absolute top-0">&#10006;</span>
           </button>
         </div>
         <div className="offcanvas-body small text-center">
           <AudioPlayer
+            autoPlay
             style={{ borderRadius: "5px", backgroundColor: "white" }}
             src={musicTracks[trackIndex].src}
-            onPlay={(e) => console.log("onPlay")}
             showSkipControls={true}
             showJumpControls={false}
             header={`${musicTracks[trackIndex].name}`}

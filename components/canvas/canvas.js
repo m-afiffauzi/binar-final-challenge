@@ -121,7 +121,7 @@ function Canvas() {
         </div>
         <div className="offcanvas-body small text-center">
           <AudioPlayer
-            autoPlay
+            autoPlay={false}
             style={{ borderRadius: "5px", backgroundColor: "white" }}
             src={musicTracks[trackIndex].src}
             showSkipControls={true}

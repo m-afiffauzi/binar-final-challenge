@@ -38,6 +38,7 @@ function Moments() {
   }, []);
 
   const videoListRef = storageRef(storage, "video");
+
   const handleUpload = () => {
     if (videoUpload == null) return;
     setLoading(true);

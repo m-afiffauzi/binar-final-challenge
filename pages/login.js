@@ -2,13 +2,11 @@ import React, { useEffect } from "react";
 import firebase from "../services/firebase";
 import style from "../styles/Register.module.css";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import Link from "next/dist/client/link";
 import { useRouter } from "next/router";
 import getCookie from "../utils/getCookie";
 import { useDispatch } from "react-redux";
 import { setName } from "../redux/name";
 import { setPict } from "../redux/profilePict";
-import { Button } from "bootstrap";
 
 const db = firebase.firestore();
 const Login = () => {

@@ -86,7 +86,7 @@ const Register = () => {
   return (
     <div className={style.wrapper}>
       <div className={style.container}>
-        <h1>Sign Up</h1>
+        <h2>Sign Up</h2>
         <form onSubmit={(v) => handleRegister(v)}>
           <h3>Username</h3>
           <input

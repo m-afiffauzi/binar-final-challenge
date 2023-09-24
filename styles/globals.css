@@ -6,6 +6,7 @@
 
 html {
   background-color: black;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -15,3 +16,23 @@ body {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #e7e1e1;
+}
+
+/* Thumb */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

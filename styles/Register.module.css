@@ -22,14 +22,13 @@
   padding: 20px 25px;
   width: 300px;
   background-color: black;
-  width: 500px;
   color: white;
 }
 
-.container h1 {
+.container h2 {
   text-align: center;
   color: white;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   text-transform: uppercase;
   border-bottom: 4px solid #ffb548;
 }
@@ -46,7 +45,7 @@
   border: none;
   background-color: black;
   border-bottom: 2px solid #ffb548;
-  font-size: 20px;
+  font-size: 16px;
   color: white;
 }
 
@@ -58,4 +57,23 @@
   font-size: 18px;
   color: white;
   margin-bottom: 10px;
+}
+
+.demo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  background-color: #ffb548;
+  color: #000;
+}
+
+.demo h3 {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.demo p {
+  font-size: 14px;
 }

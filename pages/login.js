@@ -56,8 +56,13 @@ const Login = () => {
   return (
     <div className={style.wrapper}>
       <div className={style.container}>
-        <h1>Login</h1>
+        <h2>Login</h2>
         <form onSubmit={(v) => handleLogin(v)}>
+          <div className={style.demo}>
+            <h3>Demo Account</h3>
+            <p>Email: test@gmail.com</p>
+            <p>Password: testes</p>
+          </div>
           <h3>Email</h3>
           <input
             type="Email"

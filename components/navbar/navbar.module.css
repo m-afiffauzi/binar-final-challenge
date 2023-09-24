@@ -21,7 +21,7 @@
   font-weight: bold;
   font-size: 12px;
   line-height: 16px;
-  text-align: left;
+  text-align: right;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   align-items: center;
@@ -30,13 +30,11 @@
   color: gray;
 }
 
-
 .profilePictHolder {
   aspect-ratio: 1 / 1;
   max-width: 2rem;
   overflow: hidden;
   box-sizing: border-box;
   border-radius: 100px;
-
   margin-right: 10px;
 }
